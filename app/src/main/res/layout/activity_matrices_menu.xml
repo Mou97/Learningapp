@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.live.learningapp.MatricesMenu"
+    android:background="@drawable/background">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="102dp"
+            android:layout_height="85.5dp"
+            android:layout_marginLeft="129.1dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/icon_left"
+            android:transitionName="buttonTransition"
+            />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout"
+            android:layout_marginLeft="77.5dp"
+            android:layout_marginTop="28dp"
+            android:cursorVisible="false"
+            android:text="Opérations sur les matrices"
+            android:textColor="#F2F1F2"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/button_det"
+            android:layout_width="216.6dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="71.7dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/icon_det" />
+
+        <Button
+            android:id="@+id/button_mul"
+            android:layout_width="216.6dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="71.7dp"
+            android:layout_marginTop="-15dp"
+            android:background="@drawable/icon_mul" />
+
+        <Button
+            android:id="@+id/button_add"
+            android:layout_width="216.6dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="71.7dp"
+            android:layout_marginTop="-15dp"
+            android:background="@drawable/icon_add" />
+
+        <Button
+            android:id="@+id/button_sous"
+            android:layout_width="216.6dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="71.7dp"
+            android:layout_marginTop="-15dp"
+            android:background="@drawable/icon_sous" />
+
+        <Button
+            android:id="@+id/button_inverse"
+            android:layout_width="216.6dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="71.7dp"
+            android:layout_marginTop="-15dp"
+            android:background="@drawable/icon_inverse" />
+
+        <Button
+            android:id="@+id/button_trans"
+            android:layout_width="216.6dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="71.7dp"
+            android:layout_marginTop="-15dp"
+            android:background="@drawable/icon_transpose" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

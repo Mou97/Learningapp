@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.live.learningapp.MainActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="389dp"
+        android:layout_height="595dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/background"
+        android:scaleType="fitCenter" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/button_Matrices"
+                android:layout_width="123.1dp"
+                android:layout_height="109.5dp"
+                android:layout_marginTop="120dp"
+                android:layout_marginLeft="44dp"
+                android:background="@drawable/icon_left"
+                android:transitionName="buttonTransition"
+                />
+
+            <Button
+                android:id="@+id/button_Fonctions"
+                android:layout_width="123.1dp"
+                android:layout_height="109.5dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="120dp"
+                android:background="@drawable/icon_right"
+                android:transitionName="buttonTransition2"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_newton"
+                android:layout_width="123.1dp"
+                android:layout_height="109.5dp"
+                android:layout_marginLeft="44dp"
+                android:layout_marginTop="37dp"
+                android:background="@drawable/icon_left" />
+
+            <Button
+                android:id="@+id/button_lagrange"
+                android:layout_width="123.1dp"
+                android:layout_height="109.5dp"
+                android:layout_marginTop="37dp"
+                android:layout_marginLeft="26dp"
+                android:background="@drawable/icon_right" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
