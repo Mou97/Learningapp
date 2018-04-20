@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="applications.linegraph.FirstActivity"
+    android:background="@drawable/background">
+
+    <EditText
+        android:id="@+id/edittext1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:ems="10"
+        android:hint="Entrer la premère borne"
+        android:textColorHint="#F2F1F2"
+        android:inputType="numberDecimal|numberSigned"
+        android:textColor="#F2F1F2"
+        android:fontFamily="@font/ubuntu_regular"
+
+        />
+
+    <EditText
+        android:id="@+id/edittext2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edittext1"
+        android:layout_alignStart="@+id/edittext1"
+        android:layout_below="@+id/edittext1"
+        android:ems="10"
+        android:hint="Entrer la deuxième borne"
+        android:textColorHint="#F2F1F2"
+        android:inputType="numberDecimal|numberSigned"
+        android:textColor="#F2F1F2"
+        android:fontFamily="@font/ubuntu_regular"
+
+        />
+
+    <EditText
+        android:id="@+id/edittext3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edittext2"
+        android:layout_alignStart="@+id/edittext2"
+        android:layout_below="@+id/edittext2"
+        android:ems="10"
+        android:hint="Entrer votre fonction"
+        android:textColorHint="#F2F1F2"
+        android:inputType="textPersonName"
+        android:textColor="#F2F1F2"
+        android:fontFamily="@font/ubuntu_regular" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="216.6dp"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="190dp"
+        android:background="@drawable/icon_dicho_01" />
+
+
+</RelativeLayout>
