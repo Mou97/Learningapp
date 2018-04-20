@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Grange_Data_Activity">
+
+    <EditText
+        android:id="@+id/editTextx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="numberSigned|numberDecimal"
+        android:hint="x"
+        android:textAlignment="center"
+        android:textColorHint="#F2F1F2"
+        android:textColor="#F2F1F2" />
+
+    <EditText
+        android:id="@+id/editTexty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editTextx"
+        android:layout_alignRight="@+id/editTextx"
+        android:layout_below="@+id/editTextx"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:inputType="numberSigned|numberDecimal"
+        android:hint="f(x)"
+        android:textAlignment="center"
+        android:textColorHint="#F2F1F2"
+        android:textColor="#F2F1F2" />
+
+    <Button
+        android:id="@+id/buttonpush"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/editTexty"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/icon_suivant" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/buttonpush"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="73dp"
+        android:text="TextView"
+        android:textColor="#F2F1F2" />
+
+</RelativeLayout>
