@@ -74,7 +74,7 @@ public class Grange_Data_Activity extends AppCompatActivity {
         Intent intent = new Intent(Grange_Data_Activity.this, Grange_Result_Activity.class);
         intent.putExtra("tabx", dataX);
         intent.putExtra("taby", dataY);
-
+        Grange_Data_Activity.this.finish();
         startActivityForResult(intent, 1);
     }
 }

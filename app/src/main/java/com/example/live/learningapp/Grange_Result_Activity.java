@@ -169,4 +169,6 @@ public class Grange_Result_Activity extends AppCompatActivity {
         }
         return "f(x) = " + s;
     }
+
+
 }

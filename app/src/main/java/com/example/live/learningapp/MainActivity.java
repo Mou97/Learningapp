@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import applications.linegraph.SupahActivity;
 
-public class MainMainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button button_matrice,button_function,button_newton,button_lagrange;
 
     @Override
@@ -35,12 +35,12 @@ public class MainMainActivity extends AppCompatActivity implements View.OnClickL
         switch (v.getId()) {
             case R.id.button_Matrices :
                 Intent sharedintent_1 = new Intent(this, MatricesMenu.class);
-                ActivityOptions options_1 = ActivityOptions.makeSceneTransitionAnimation(MainMainActivity.this, button_matrice, "buttonTransition");
+                ActivityOptions options_1 = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, button_matrice, "buttonTransition");
                 startActivity(sharedintent_1, options_1.toBundle());
                 break;
             case R.id.button_Fonctions :
                 Intent sharedintent_2 = new Intent(this, SupahActivity.class);
-                ActivityOptions options_2 = ActivityOptions.makeSceneTransitionAnimation(MainMainActivity.this, button_function, "buttonTransition2");
+                ActivityOptions options_2 = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, button_function, "buttonTransition2");
                 startActivity(sharedintent_2, options_2.toBundle());
                 break;
             case R.id.button_newton:
@@ -48,7 +48,7 @@ public class MainMainActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.button_lagrange:
                 Intent sharedintent_3 = new Intent(this, GrangeActivity.class);
-                ActivityOptions options_3 = ActivityOptions.makeSceneTransitionAnimation(MainMainActivity.this, button_lagrange, "buttonTransition3");
+                ActivityOptions options_3 = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, button_lagrange, "buttonTransition3");
                 startActivity(sharedintent_3, options_3.toBundle());
                 break;
 

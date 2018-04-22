@@ -2,6 +2,8 @@ package com.example.live.learningapp;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.inputmethodservice.Keyboard;
+import android.inputmethodservice.KeyboardView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +19,7 @@ public class GrangeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grange);
+
 
         editText1 = (EditText) findViewById(R.id.edittextNbrPoint);
         //custom font
