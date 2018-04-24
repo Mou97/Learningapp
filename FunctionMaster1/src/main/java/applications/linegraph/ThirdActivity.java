@@ -17,7 +17,8 @@ import tokenizer.TokenizerException;
 
 public class ThirdActivity extends AppCompatActivity {
     private boolean invalide;
-    String str;
+    private String str;
+    private EditText edittext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +27,7 @@ public class ThirdActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third);
 
-        final EditText edittext = (EditText) findViewById(R.id.editText);
+        edittext = (EditText) findViewById(R.id.editText);
         //custom font
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/Ubuntu/Ubuntu-Regular.ttf");
         edittext.setTypeface(typeface);
@@ -39,24 +40,24 @@ public class ThirdActivity extends AppCompatActivity {
             public void onClick(View v) {
                 invalide = false;
                 str = edittext.getText().toString();
-                str = funcmanager(str);
+                //str = funcmanager(str);
                 try {
                     String z = dfunc(str);
 
-                } catch (Exception e) {             //non-valid expression ,, error message
+                } catch (Exception  e) {             //non-valid expression ,, error message
                     Drawable warning = (Drawable) getResources().getDrawable(R.drawable.icon_warning);
                     warning.setBounds(0, 0, warning.getIntrinsicWidth(), warning.getIntrinsicHeight());
                     edittext.setError("Format non-valide", warning);
                     invalide = true;
 
                 }
-
                 if (edittext.getText().toString().equals("")) {
                     Toast.makeText(ThirdActivity.this, "Veuiller entrer une fonction", Toast.LENGTH_SHORT).show();
                 } else if (!invalide) {
-                    String text = edittext.getText().toString();
+                    //String text = edittext.getText().toString();
                     Intent intent = new Intent(ThirdActivity.this, DerivActivity.class);
-                    intent.putExtra("textos", text);
+                    //intent.putExtra("textos", text);
+                    intent.putExtra("textos", str);
                     startActivityForResult(intent, 1);
 
                 }

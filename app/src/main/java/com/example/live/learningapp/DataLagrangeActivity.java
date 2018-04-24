@@ -13,7 +13,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 
-public class Grange_Data_Activity extends AppCompatActivity {
+public class DataLagrangeActivity extends AppCompatActivity {
 
     ArrayList<String> dataX = new ArrayList<String>();
     ArrayList<String> dataY = new ArrayList<String>();
@@ -27,7 +27,7 @@ public class Grange_Data_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_grange__data_);
+        setContentView(R.layout.activity_data_lagrange);
 
         Intent intent = getIntent();
         n = intent.getIntExtra("number", 0);
@@ -48,12 +48,11 @@ public class Grange_Data_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (editTextx.getText().toString().equals("") || editTexty.getText().toString().equals("")) {
-                    Toast.makeText(Grange_Data_Activity.this, "Veuiller remplir tous les champs", Toast.LENGTH_SHORT).show();
-                } else if (dataX.contains(editTextx.getText().toString()) && dataY.contains(editTexty.getText().toString())) {
-                    if (dataX.indexOf(editTextx.getText().toString()) == dataY.indexOf(editTexty.getText().toString())) {
-                        editTextx.setText("");
-                        Toast.makeText(Grange_Data_Activity.this, "Ce point existe déjà", Toast.LENGTH_SHORT).show();
-                    }
+                    Toast.makeText(DataLagrangeActivity.this, "Veuiller remplir tous les champs", Toast.LENGTH_SHORT).show();
+                } else if (editTextx.getText().toString().equals("-") || editTextx.getText().toString().equals("+") || editTexty.getText().toString().equals("-") || editTexty.getText().toString().equals("+")){
+                    Toast.makeText(DataLagrangeActivity.this, "Entrer Invalide", Toast.LENGTH_SHORT).show();
+                } else if (dataX.contains(editTextx.getText().toString())) {
+                    Toast.makeText(DataLagrangeActivity.this, "Cette Abscisse existe déjà", Toast.LENGTH_SHORT).show();
                 } else if (ct != n) {
                     dataX.add(editTextx.getText().toString());
                     dataY.add(editTexty.getText().toString());
@@ -71,10 +70,11 @@ public class Grange_Data_Activity extends AppCompatActivity {
     }
 
     public void openActivityFourthActivity() {
-        Intent intent = new Intent(Grange_Data_Activity.this, Grange_Result_Activity.class);
+        Intent intent = new Intent(DataLagrangeActivity.this, AfficheLagrangeActivity.class);
         intent.putExtra("tabx", dataX);
         intent.putExtra("taby", dataY);
-        Grange_Data_Activity.this.finish();
+        DataLagrangeActivity.this.finish();
         startActivityForResult(intent, 1);
     }
+
 }

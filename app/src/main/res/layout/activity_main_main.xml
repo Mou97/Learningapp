@@ -31,7 +31,7 @@
                 android:layout_height="109.5dp"
                 android:layout_marginTop="120dp"
                 android:layout_marginLeft="44dp"
-                android:background="@drawable/icon_left"
+                android:background="@drawable/icon_matrice"
                 android:transitionName="buttonTransition"
                 />
 
@@ -41,7 +41,7 @@
                 android:layout_height="109.5dp"
                 android:layout_marginLeft="26dp"
                 android:layout_marginTop="120dp"
-                android:background="@drawable/icon_right"
+                android:background="@drawable/icon_fonctions"
                 android:transitionName="buttonTransition2"
                 />
 
@@ -53,20 +53,20 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button_newton"
+                android:id="@+id/button_lagrange"
                 android:layout_width="123.1dp"
                 android:layout_height="109.5dp"
                 android:layout_marginLeft="44dp"
                 android:layout_marginTop="37dp"
-                android:background="@drawable/icon_left" />
+                android:background="@drawable/icon_lagrange" />
 
             <Button
-                android:id="@+id/button_lagrange"
+                android:id="@+id/button_newton"
                 android:layout_width="123.1dp"
                 android:layout_height="109.5dp"
                 android:layout_marginTop="37dp"
                 android:layout_marginLeft="26dp"
-                android:background="@drawable/icon_right" />
+                android:background="@drawable/icon_newton" />
         </LinearLayout>
 
     </LinearLayout>

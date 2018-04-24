@@ -15,6 +15,7 @@ import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 
 
+import ast.Operation;
 import tokenizer.AbstractTreeBuilder;
 import tokenizer.TokenizerException;
 
@@ -36,11 +37,13 @@ public class GraphActivity extends AppCompatActivity {
         String str = intent.getStringExtra("text");
         str = str.toLowerCase();
         String save = str;
-        str = funcmanager(str);
+        str = funcmanager(str);    // test not used (maybe )::: we have to take it off (maybe)
         try {
             Double z = func(str, a);
             z = func(str, b);
-        } catch (Exception e) {
+            z = func (dfunc(str),1.0);
+
+        } catch (TokenizerException | ArithmeticException e) {
             openActivity1();
         }
 
@@ -111,5 +114,10 @@ public class GraphActivity extends AppCompatActivity {
             }
         }
         return val;
+    }
+    public static String dfunc(String str) throws TokenizerException {
+        AbstractTreeBuilder tree = new AbstractTreeBuilder(str);
+        Operation derivative = tree.getTree().getDerivative();
+        return derivative.toString();
     }
 }

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".Grange_Data_Activity">
+    tools:context=".DataLagrangeActivity">
+
 
     <EditText
         android:id="@+id/editTextx"
@@ -14,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:ems="10"
+        android:ems="9"
         android:inputType="numberSigned|numberDecimal"
         android:hint="x"
         android:textAlignment="center"
@@ -29,7 +30,7 @@
         android:layout_alignRight="@+id/editTextx"
         android:layout_below="@+id/editTextx"
         android:layout_marginTop="13dp"
-        android:ems="10"
+        android:ems="9"
         android:inputType="numberSigned|numberDecimal"
         android:hint="f(x)"
         android:textAlignment="center"
@@ -47,23 +48,13 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/buttonpush"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="2dp"
-        android:layout_marginTop="73dp"
+        android:layout_marginTop="72dp"
         android:text="TextView"
-        android:textColor="#F2F1F2" />
+        android:textColor="#F2F1F2"/>
 
-    <android.inputmethodservice.KeyboardView
-        android:id="@+id/keyboardview"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:visibility="gone" />
 
 </RelativeLayout>

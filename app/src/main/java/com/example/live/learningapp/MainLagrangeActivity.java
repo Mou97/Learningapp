@@ -11,31 +11,29 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class GrangeActivity extends AppCompatActivity {
+public class MainLagrangeActivity extends AppCompatActivity {
+
 
     private EditText editText1;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_grange);
-
+        setContentView(R.layout.activity_main_lagrange);
 
         editText1 = (EditText) findViewById(R.id.edittextNbrPoint);
         //custom font
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/Ubuntu/Ubuntu-Regular.ttf");
         editText1.setTypeface(typeface);
 
-
         Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (editText1.getText().toString().equals("")) {
-                    Toast.makeText(GrangeActivity.this, "Veuiller inserer un nombre", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainLagrangeActivity.this, "Veuiller Entrer Le Nombre de Points", Toast.LENGTH_SHORT).show();
                 } else if (editText1.getText().toString().equals("0")
                         || editText1.getText().toString().equals("1")) {
-                    Toast.makeText(GrangeActivity.this, "Veuiller entrer un nombre > que 1", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainLagrangeActivity.this, "Le Nombre de Points n'est pas Suffisant", Toast.LENGTH_SHORT).show();
                 } else {
                     openActivityDonnee();
                 }
@@ -43,13 +41,13 @@ public class GrangeActivity extends AppCompatActivity {
         });
     }
 
-    public void openActivityDonnee() {
+    public void openActivityDonnee(){
 
         int number = Integer.parseInt(editText1.getText().toString());
 
-        Intent intent = new Intent(GrangeActivity.this, Grange_Data_Activity.class);
-        intent.putExtra("number", number);
+        Intent intent = new Intent (MainLagrangeActivity.this, DataLagrangeActivity.class);
+        intent.putExtra("number",number);
 
-        startActivityForResult(intent, 1);
+        startActivityForResult(intent,1);
     }
 }

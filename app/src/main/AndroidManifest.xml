@@ -16,12 +16,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".MatricesMenu" />
-        <activity android:name=".FunctionsMenu" />
-        <activity android:name=".GrangeActivity" />
-        <activity android:name=".Grange_Data_Activity" />
+        <activity android:name=".MainLagrangeActivity" />
+        <activity android:name=".DataLagrangeActivity" />
         <activity
-            android:name=".Grange_Result_Activity"
-            android:parentActivityName=".GrangeActivity"></activity>
+            android:name=".AfficheLagrangeActivity"
+            android:parentActivityName=".MainLagrangeActivity"></activity>
     </application>
 
 </manifest>

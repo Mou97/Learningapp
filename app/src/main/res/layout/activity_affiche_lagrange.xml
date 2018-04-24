@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AfficheLagrangeActivity"
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="157dp"
+        android:inputType="textMultiLine"
+        android:textSize="16dp"
+        android:text="TextView"
+        android:textColor="#F2F1F2"
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="153dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="94dp"
+        android:text="Votre fonction est :"
+        android:textColor="#F2F1F2"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/editTextCalc"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/result"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:ems="10"
+        android:hint="Entrer x"
+        android:textColor="#F2F1F2"
+        android:textColorHint="#F2F1F2"
+        android:inputType="numberSigned|numberDecimal"
+        />
+
+    <Button
+        android:id="@+id/buttonCalc"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/icon_calculer_fx" />
+
+    <TextView
+        android:id="@+id/textViewCalc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="215dp"
+        android:text="TextView"
+        android:textColor="#F2F1F2" />
+</RelativeLayout>

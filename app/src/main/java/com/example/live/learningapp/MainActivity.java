@@ -43,13 +43,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 ActivityOptions options_2 = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, button_function, "buttonTransition2");
                 startActivity(sharedintent_2, options_2.toBundle());
                 break;
-            case R.id.button_newton:
-                Toast.makeText(this, "button newton clicked ", Toast.LENGTH_SHORT).show();
-                break;
             case R.id.button_lagrange:
-                Intent sharedintent_3 = new Intent(this, GrangeActivity.class);
+                Intent sharedintent_3 = new Intent(this, MainLagrangeActivity.class);
                 ActivityOptions options_3 = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, button_lagrange, "buttonTransition3");
                 startActivity(sharedintent_3, options_3.toBundle());
+                break;
+            case R.id.button_newton:
+                Intent sharedintent_4 = new Intent(this, MainLagrangeActivity.class);
+                ActivityOptions options_4 = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, button_newton, "buttonTransition4");
+                startActivity(sharedintent_4, options_4.toBundle());
                 break;
 
         }

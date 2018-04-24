@@ -27,7 +27,7 @@ public class DerivActivity extends AppCompatActivity {
 
         try {
             str = dfunc(str);
-        } catch (TokenizerException e) {
+        } catch (TokenizerException | ArithmeticException e) {
             e.printStackTrace();
         }
         TextView textView = (TextView) findViewById(R.id.textviewtos);
