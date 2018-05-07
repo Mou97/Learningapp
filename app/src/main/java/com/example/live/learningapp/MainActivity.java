@@ -2,10 +2,12 @@ package com.example.live.learningapp;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import applications.linegraph.SupahActivity;
@@ -27,6 +29,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button_function.setOnClickListener(this);
         button_newton.setOnClickListener(this);
         button_lagrange.setOnClickListener(this);
+        //custom font
+        TextView txmatrice = (TextView) findViewById(R.id.TextMatrice);
+        TextView txfonction = (TextView) findViewById(R.id.TextFonctions);
+        TextView txlagrange = (TextView) findViewById(R.id.TextLagrange);
+        TextView txNewton = (TextView) findViewById(R.id.TextNewton);
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/Ubuntu/Ubuntu-Regular.ttf");
+        txmatrice.setTypeface(typeface);
+        txfonction.setTypeface(typeface);
+        txlagrange.setTypeface(typeface);
+        txNewton.setTypeface(typeface);
 
     }
 
@@ -49,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(sharedintent_3, options_3.toBundle());
                 break;
             case R.id.button_newton:
-                Intent sharedintent_4 = new Intent(this, MainLagrangeActivity.class);
+                Intent sharedintent_4 = new Intent(this, MainNewtonActivity.class);
                 ActivityOptions options_4 = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, button_newton, "buttonTransition4");
                 startActivity(sharedintent_4, options_4.toBundle());
                 break;

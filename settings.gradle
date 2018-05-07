@@ -1,2 +1,2 @@
-include ':app', ':FunctionMaster1'
+include ':app', ':FunctionMaster1' ,':MatrixMaster'
 

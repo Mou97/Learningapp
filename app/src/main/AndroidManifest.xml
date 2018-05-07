@@ -17,10 +17,19 @@
         </activity>
         <activity android:name=".MatricesMenu" />
         <activity android:name=".MainLagrangeActivity" />
+        <activity
+            android:name=".MainNewtonActivity"
+            android:parentActivityName=".MainNewtonActivity" />
         <activity android:name=".DataLagrangeActivity" />
         <activity
             android:name=".AfficheLagrangeActivity"
-            android:parentActivityName=".MainLagrangeActivity"></activity>
+            android:parentActivityName=".MainLagrangeActivity" />
+        <activity
+            android:name=".DataNewtonActivity"
+            android:parentActivityName=".MainNewtonActivity" />
+        <activity
+            android:name=".AfficheNewtonActivity"
+            android:parentActivityName=".DataNewtonActivity" />
     </application>
 
 </manifest>

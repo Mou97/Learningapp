@@ -12,7 +12,7 @@
         android:layout_height="85.5dp"
         android:layout_marginLeft="129.1dp"
         android:layout_marginTop="50dp"
-        android:background="@drawable/icon_lagrange"
+        android:background="@drawable/icon_newton"
         android:transitionName="buttonTransition4" />
 
     <EditText
