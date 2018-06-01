@@ -423,6 +423,7 @@ public class FirstActivity extends AppCompatActivity {
 
     }
 
+
     public void disableButtonClick(EditText txt) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             txt.setRawInputType(InputType.TYPE_NULL);
