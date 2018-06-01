@@ -5,9 +5,9 @@
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context="com.example.live.learningapp.MainActivity"
-    tools:layout_editor_absoluteY="25dp"
-    android:background="@drawable/background">
+    tools:layout_editor_absoluteY="25dp">
 
     <Button
         android:id="@+id/button_Matrices"
@@ -24,10 +24,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/button_Matrices"
-        android:layout_marginStart="68dp"
+        android:layout_marginStart="79dp"
         android:text="Matrices"
         android:textColor="#F2F1F2"
-        android:textSize="20dp" />
+        android:textSize="16dp" />
 
     <Button
         android:id="@+id/button_Fonctions"
@@ -43,11 +43,12 @@
         android:id="@+id/TextFonctions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/button_Fonctions"
+        android:layout_alignParentEnd="true"
         android:layout_below="@+id/button_Matrices"
-        android:text="   Fonctions"
+        android:layout_marginEnd="72dp"
+        android:text="Fonctions"
         android:textColor="#F2F1F2"
-        android:textSize="20dp" />
+        android:textSize="16dp" />
 
     <Button
         android:id="@+id/button_lagrange"
@@ -63,13 +64,13 @@
         android:id="@+id/TextLagrange"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/button_Matrices"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/button_lagrange"
-        android:layout_marginEnd="-4dp"
+        android:layout_marginStart="65dp"
         android:layout_marginTop="-179dp"
         android:text="Methode de \n   Lagrange"
         android:textColor="#F2F1F2"
-        android:textSize="20dp" />
+        android:textSize="16dp" />
 
     <Button
         android:id="@+id/button_newton"
@@ -84,11 +85,150 @@
         android:id="@+id/TextNewton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/button_Fonctions"
+        android:layout_alignParentEnd="true"
         android:layout_below="@+id/button_lagrange"
+        android:layout_marginEnd="57dp"
         android:layout_marginTop="-179dp"
-        android:text="Methode de \n   Newton"
+        android:text=" Methode de \n     Newton"
         android:textColor="#F2F1F2"
-        android:textSize="20dp" />
+        android:textSize="16dp" />
+
+    <View
+        android:id="@+id/fabBGLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bluredbg"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/fabLayout1"
+        android:layout_width="123dp"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="9dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="24dp"
+        android:clipToPadding="false"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+
+        <TextView
+            android:id="@+id/fab1_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aide"
+            android:textColor="#f2f1f2"
+            android:textSize="20dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:onClick="@{fabHandler}"
+            app:fabSize="mini"
+            app:srcCompat="@android:drawable/ic_menu_help" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fabLayout2"
+        android:layout_width="163dp"
+        android:layout_height="98dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="24dp"
+        android:clipToPadding="false"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+
+        <TextView
+            android:id="@+id/fab2_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_regular"
+            android:text="A propos"
+            android:textColor="#f2f1f2"
+            android:textSize="20dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:tint="#f2f1f2"
+            app:fabSize="mini"
+            app:srcCompat="@android:drawable/stat_sys_warning" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fabLayout3"
+        android:layout_width="224dp"
+        android:layout_height="107dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="fill_vertical"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="24dp"
+        android:clipToPadding="false"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+
+        <TextView
+            android:id="@+id/fab3_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_regular"
+            android:text="Documentation"
+            android:textColor="#f2f1f2"
+            android:textSize="20dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:tint="#f2f1f2"
+            app:fabSize="mini"
+            app:srcCompat="@android:drawable/ic_dialog_info" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="96dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="24dp"
+        android:clipToPadding="false">
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="91dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:tint="#f2f1f2"
+            app:fabSize="normal"
+            app:srcCompat="@android:drawable/ic_input_add" />
+
+    </LinearLayout>
+
 
 </RelativeLayout>

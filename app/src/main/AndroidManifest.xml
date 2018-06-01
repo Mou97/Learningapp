@@ -16,10 +16,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".MatricesMenu" />
-        <activity android:name=".MainLagrangeActivity" />
+
+
+        <activity android:name=".MainLagrangeActivity"></activity>
         <activity
             android:name=".MainNewtonActivity"
-            android:parentActivityName=".MainNewtonActivity" />
+            android:parentActivityName=".MainNewtonActivity"></activity>
+
         <activity android:name=".DataLagrangeActivity" />
         <activity
             android:name=".AfficheLagrangeActivity"
@@ -30,6 +33,12 @@
         <activity
             android:name=".AfficheNewtonActivity"
             android:parentActivityName=".DataNewtonActivity" />
+        <activity
+            android:name=".Help"
+            android:label="@string/title_activity_help"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".About_Us" />
+        <activity android:name=".Documentation"></activity>
     </application>
 
 </manifest>

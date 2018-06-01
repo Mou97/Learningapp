@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:background="@drawable/background"
+    tools:context="com.example.sg.matrix_test.MainInverseActivity">
+
+    <EditText
+        android:id="@+id/editTextTaille"
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="136dp"
+        android:ems="10"
+        android:hint="L'ordre"
+        android:inputType="number"
+        android:textColor="#F2F1F2"
+        android:textColorHint="#F2F1F2" />
+
+    <Button
+        android:id="@+id/buttonTaille"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="196dp"
+        android:background="@drawable/icon_suivant" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="94dp"
+        android:textColor="#F2F1F2"
+        android:textSize="20dp"
+        android:text="Entrer l'ordre de votre matrice :" />
+</RelativeLayout>

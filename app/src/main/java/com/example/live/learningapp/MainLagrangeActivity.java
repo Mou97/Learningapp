@@ -20,6 +20,10 @@ public class MainLagrangeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_lagrange);
 
+        //fading probleme
+        //getWindow().setExitTransition(null);
+        //getWindow().setEnterTransition(null);
+
         editText1 = (EditText) findViewById(R.id.edittextNbrPoint);
         //custom font
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/Ubuntu/Ubuntu-Regular.ttf");
@@ -39,6 +43,7 @@ public class MainLagrangeActivity extends AppCompatActivity {
                 }
             }
         });
+
     }
 
     public void openActivityDonnee(){

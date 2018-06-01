@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.example.sg.matrix_test.MainMatrixActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="102dp"
+            android:layout_height="85.5dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/icon_matrice"
+            android:transitionName="buttonTransition" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="28dp"
+            android:cursorVisible="false"
+            android:text="Opérations sur les matrices"
+            android:textColor="#F2F1F2"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/butDeterminant"
+            android:layout_width="216.6dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/icon_det" />
+
+        <Button
+            android:id="@+id/butInverse"
+            android:layout_width="216.6dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-15dp"
+            android:background="@drawable/icon_inverse" />
+
+        <Button
+            android:id="@+id/butTranspose"
+            android:layout_width="216.6dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-15dp"
+            android:background="@drawable/icon_transpose" />
+
+        <Button
+            android:id="@+id/butAdd"
+            android:layout_width="216.6dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-15dp"
+            android:background="@drawable/icon_add" />
+
+        <Button
+            android:id="@+id/butSous"
+            android:layout_width="216.6dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-15dp"
+            android:background="@drawable/icon_sous" />
+
+        <Button
+            android:id="@+id/butMulti"
+            android:layout_width="216.6dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-15dp"
+            android:background="@drawable/icon_mul" />
+
+    </LinearLayout>
+
+</RelativeLayout>

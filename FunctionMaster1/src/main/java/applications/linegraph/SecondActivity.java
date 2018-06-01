@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import tokenizer.AbstractTreeBuilder;
@@ -37,11 +36,10 @@ public class SecondActivity extends AppCompatActivity {
         editText4.setTypeface(typeface);
 
 
-        final boolean result;
-        //result = func(editText4.getText().toString(), Double.parseDouble(editText1.getText().toString())) * func(editText4.getText().toString(), Double.parseDouble(editText2.getText().toString())) >= 0;
 
 
         Button button = (Button) findViewById(R.id.button2);
+        assert button != null;
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,14 +80,34 @@ public class SecondActivity extends AppCompatActivity {
         intent.putExtra("numberprime3", number3);
         intent.putExtra("textprime", text);
 
+
         startActivity(intent);
     }
 
-
     public static Double func(String str, Double value) throws TokenizerException {
+        str = funcmanager(str);
         AbstractTreeBuilder tree = new AbstractTreeBuilder(str);
         value = tree.getTree().getNumericResult(value);
         return value;
 
     }
+
+    public static String funcmanager(String val) {
+        val = val.toLowerCase();
+        char c;
+        for (int i = 0; i < val.length(); i++) {
+            c = val.charAt(i);
+            if (c == '-' && i == 0) {
+                val = "0" + val;
+            }
+            if (c == '-' && i != 0) {
+                if (val.charAt(i - 1) == '(') {
+                    val = val.substring(0, i) + "0" + val.substring(i, val.length());
+                }
+            }
+        }
+
+        return val;
+    }
+
 }

@@ -15,3 +15,8 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+-keep class com.example.live.learningapp.MainActivity
+
+-keepclassmembers class *{
+public void *(fabHandler);
+}

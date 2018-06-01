@@ -16,5 +16,7 @@ public class MatricesMenu extends AppCompatActivity {
         TextView tx = (TextView) findViewById(R.id.textView);
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/Ubuntu/Ubuntu-Regular.ttf");
         tx.setTypeface(typeface);
+
+
     }
 }

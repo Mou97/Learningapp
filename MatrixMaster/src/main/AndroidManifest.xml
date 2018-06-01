@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sg.matrix_test">
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainDeterminantActivity" />
+        <activity android:name=".DataDeterminantActivity" />
+        <activity android:name=".MainMatrixActivity">
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>  -->
+        </activity>
+        <activity android:name=".MainInverseActivity" />
+        <activity android:name=".DataInverseActivity" />
+        <activity android:name=".AfficheInverseActivity" />
+        <activity android:name=".AfficheDeterminantActivity" />
+        <activity android:name=".MainTransposeActivity" />
+        <activity android:name=".DataTransposeActivity" />
+        <activity android:name=".AfficheTransposeActivity" />
+        <activity android:name=".MainMultiplicationActivity" />
+        <activity android:name=".DataMultiMatrice1Activity" />
+        <activity android:name=".DataMultiMatrice2Activity" />
+        <activity android:name=".AfficheMultiMatriceActivity" />
+        <activity android:name=".MainAdditionActivity" />
+        <activity android:name=".DataAddMatrice1Activity" />
+        <activity android:name=".DataAddMatrice2Activity" />
+        <activity android:name=".AfficheAddMatriceActivity" />
+        <activity android:name=".MainSoustractionActivity" />
+        <activity android:name=".DataSousMatrice1Activity" />
+        <activity android:name=".DataSousMatrice2Activity" />
+        <activity android:name=".AfficheSoustractionActivity"></activity>
+    </application>
+
+</manifest>
